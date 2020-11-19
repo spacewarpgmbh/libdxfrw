@@ -1938,6 +1938,7 @@ bool dxfRW::processLType() {
             if (reading) {
                 ltype.update();
                 iface->addLType(ltype);
+                ltype.path.clear();
             }
             sectionstr = reader->getString();
             DRW_DBG(sectionstr); DRW_DBG("\n");
